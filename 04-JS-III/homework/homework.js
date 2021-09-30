@@ -2,19 +2,24 @@
 
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
-  // Tu código:
+  // Tu código:    0      1      2
+  // let array = [ " " , " " , " "]
+ return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+
+  return array[array.length - 1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length;
 }
 
 
@@ -22,7 +27,12 @@ function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
-  // Tu código:
+  // Tu código:    0   1    2   3   4
+  // let array = [ 2 , 3 , 3,  10 , 5]
+ let nuevoarray = []
+  for ( let i = 0 ; i < array.length  ; i++ ) {
+     nuevoarray[i] = array[i] + 1;
+  } return nuevoarray
 }
 
 
@@ -30,7 +40,13 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-}
+  // let array = [ asdsd ,sdasd ,asdasd]
+ //array[array.length] = elemento;
+ //return array;
+array.push(elemento);
+return array;
+ 
+} 
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -38,6 +54,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -46,21 +64,47 @@ function dePalabrasAFrase(palabras) {
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
-  // Tu código:
+  // Tu código:       0         1        2
+  //var palabras = ["Hola" , "world" , "!" ]
+ 
+
+ //return palabras.join(" ");
+
+
+   var string = palabras[0] ;
+   for ( let i = 1 ; i < palabras.length  ; i++ ) {
+     string = string + " " + palabras[i]
+   } return string;
+
+  
 }
 
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
-  // Tu código:
+  // Tu código:    0   1   2   3  4  
+  // var array = [ 1, 2, ,3 ,3 ,5 6, elemento]
+
+// return array.includes(elemento);
+var b = false ; 
+for ( let i = 0 ; i < array.length  ; i++ )
+{ if ( elemento === array[i]) b = true
+} return b;
 }
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
-  // Tu código:
+  // Tu código:      0   1   2  3   4  
+  // var numeros = [ 2 ; 3 ; 4 ; 5 ;10]
+//  const reducer = (previousValue, currentValue) => previousValue + currentValue;
+ // return numeros.reduce(reducer)
+ var total = 0;
+ for ( let i = 0 ; i < numeros.length  ; i++ ) { 
+   total = total + numeros[i];
+ } return total;
 }
 
 
