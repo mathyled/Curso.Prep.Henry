@@ -29,6 +29,12 @@ function incrementarPorUno(array) {
   // y devuelve el array
   // Tu código:    0   1    2   3   4
   // let array = [ 2 , 3 , 3,  10 , 5]
+  //array es un libro, y tu quieres escribir. Como le dices en que hoja escribir ?
+  /* Si no se coloca el "[ i ]" JS sobrescribirá el array creado 
+  por una variable con valor "array[i] + 1", es el parentesis cuadrado 
+  y el numero dentro de el el que le indica, primero que es un array y
+   segundo la posicion del array donde se debe guardar 
+   el valor "array[i] + 1".*/
  let nuevoarray = []
   for ( let i = 0 ; i < array.length  ; i++ ) {
      nuevoarray[i] = array[i] + 1;
@@ -300,6 +306,9 @@ function continueStatement(numero) {
   // las iteraciones unicamente. 
   //En otros ejemplos se usa el indice "i" para ir accediendo 
   //a las posiciones de un array por ejempo, este no seria el caso
+  /*en este caso estas usando el bucle for para realizar las iteraciones
+   unicamente. En otros ejemplos se usa el indice "i" para ir accediendo 
+   a las posiciones de un array por ejempo, este no seria el caso*/
   var suma = numero;
   var array = []
   for ( var i = 0 ; i < 10 ; i++ ) {
