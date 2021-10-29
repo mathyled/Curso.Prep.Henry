@@ -269,14 +269,14 @@ function breakStatement(numero) {
   // Tu código:
   var aum=[];
   var suma=numero;
-  var i=0;
+  var i=0;  // es una variable global , asique va estar en toda la funcion
   while (i<10) {
   i++;
   suma+=2; 
   if(suma===i)break;
   else{ aum.push(suma) }
-  }
-  if(i < 10){ return "Se interrumpió la ejecución"}
+  }                                                //después del bucle for
+  if(i < 10){ return "Se interrumpió la ejecución"}// el ultimo valor que toma i = 10
   else { return aum;}
    }
 
